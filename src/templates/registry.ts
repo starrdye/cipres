@@ -1,6 +1,5 @@
 import { Template } from '../types/template';
 import { SIMPLE_FACTSHEET_TEMPLATE } from './simpleTemplate';
-import { STANDARD_FACTSHEET_TEMPLATE } from './factsheetTemplate';
 import { DASHBOARD_TEMPLATE } from './dashboardTemplate';
 
 export const TEMPLATE_REGISTRY: Template[] = [
@@ -11,8 +10,8 @@ export const TEMPLATE_REGISTRY: Template[] = [
     requiredInputs: ['mapping', 'report', 'ai_settings'],
     generateHtml: (data) => {
       let html = DASHBOARD_TEMPLATE;
-      
-      const wrapReview = (val: string, fieldId: string, desc: string, source: string = 'calculation', type: string = 'logic', related: string = '') => 
+
+      const wrapReview = (val: string, fieldId: string, desc: string, source: string = 'calculation', type: string = 'logic', related: string = '') =>
         `<span class="reviewable" data-source="${source}" data-field-id="${fieldId}" data-detail="${desc}" data-value="${val}" data-review-type="${type}" data-related='${related}'>${val}</span>`;
 
       const replacements: Record<string, string> = {
@@ -95,11 +94,11 @@ export const TEMPLATE_REGISTRY: Template[] = [
     description: 'A minimal one-page summary highlighting key performance and exposure metrics.',
     requiredInputs: ['report'],
     generateHtml: (data) => {
-      const topTheme = data.customData?.simpleSummary.themeOverride || 
+      const topTheme = data.customData?.simpleSummary.themeOverride ||
         (data.thematic.labels.length > 0 ? `${data.thematic.labels[0]} (${data.thematic.data[0]}%)` : 'N/A');
-        
+
       const navText = data.customData?.simpleSummary.navOverride || `$${data.nav.toLocaleString()}`;
-      
+
       const commentary = (data.customData?.simpleSummary.commentary || '')
         .replace(/{{REPORT_PERIOD}}/g, data.reportDateFormatted);
 
@@ -121,8 +120,8 @@ export const TEMPLATE_REGISTRY: Template[] = [
           { id: 'commentary', label: 'Strategy Snapshot Paragraph', type: 'text', lines: 4 }
         ],
         defaultData: {
-          navOverride: '', 
-          themeOverride: '', 
+          navOverride: '',
+          themeOverride: '',
           commentary: 'The fund maintains a disciplined approach to thematic investing. In {{REPORT_PERIOD}}, the portfolio remained focused on core conviction areas, ensuring balanced exposure across key geographies while optimizing for risk-adjusted returns.'
         }
       }
