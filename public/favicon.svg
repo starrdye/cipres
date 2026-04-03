@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <linearGradient id="textGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)" rx="16" />
+
+  <!-- Abstract design elements (Charts / Nodes) -->
+  <path d="M 100,250 Q 250,150 400,200 T 700,100 T 1000,180 T 1200,50" fill="none" stroke="#4f46e5" stroke-width="4" stroke-linecap="round" filter="url(#glow)" opacity="0.6"/>
+  <path d="M 0,280 Q 300,250 500,150 T 900,200 T 1200,100" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  
+  <g opacity="0.1">
+    <circle cx="200" cy="100" r="50" fill="#60a5fa" />
+    <circle cx="800" cy="200" r="80" fill="#c084fc" />
+    <circle cx="1000" cy="50" r="120" fill="#34d399" />
+  </g>
+
+  <!-- Glowing dots on the line -->
+  <circle cx="400" cy="200" r="6" fill="#818cf8" filter="url(#glow)"/>
+  <circle cx="700" cy="100" r="6" fill="#34d399" filter="url(#glow)"/>
+  <circle cx="1000" cy="180" r="6" fill="#60a5fa" filter="url(#glow)"/>
+
+  <!-- Bar chart abstract -->
+  <rect x="900" y="200" width="20" height="50" fill="#4f46e5" rx="4" opacity="0.8"/>
+  <rect x="930" y="160" width="20" height="90" fill="#60a5fa" rx="4" opacity="0.8"/>
+  <rect x="960" y="120" width="20" height="130" fill="#34d399" rx="4" opacity="0.8"/>
+  <rect x="990" y="80" width="20" height="170" fill="#c084fc" rx="4" opacity="0.8"/>
+
+  <!-- Text content -->
+  <text x="100" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold" fill="white">
+    Financial Statement
+  </text>
+  <text x="100" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="900" fill="url(#textGlow)">
+    Factsheet Automator
+  </text>
+  <text x="100" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8" font-weight="500">
+    Streamline, Analyze, and Visualize Your Financial Data Effortlessly.
+  </text>
+  
+  <!-- Logo/Icon placeholder -->
+  <g transform="translate(100, 60)">
+    <rect width="32" height="32" rx="8" fill="#3b82f6" />
+    <path d="M 8,24 L 16,16 L 20,20 L 28,10 L 28,14 M 28,10 L 24,10" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="44" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="white" letter-spacing="1">CIPRES</text>
+  </g>
+</svg>
