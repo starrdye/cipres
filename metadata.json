@@ -1,0 +1,5 @@
+{
+  "name": "Cipres Factsheet Automator",
+  "description": "A high-performance React application that automates financial factsheet creation using client-side data processing. Pruned dependencies for faster loading.",
+  "requestFramePermissions": []
+}
