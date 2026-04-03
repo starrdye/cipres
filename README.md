@@ -2,9 +2,9 @@
   <img src="banner.svg" alt="Financial Statement Factsheet Automator" width="800">
 </div>
 
-# Cipres Factsheet Automator
+# Cipres Analytics
 
-A high-performance React application designed for Ternary Cypress Fund to automate the creation of professional financial factsheets. It processes client-side data (Excel mapping and IBKR CSV position reports) to generate high-quality, print-ready PDF-style factsheets with dynamic charts.
+A high-performance Business Intelligence Dashboard designed to transform raw operational data into professional, print-ready reports. It processes Excel mapping files and CSV position reports to generate dynamic visualizations and data-driven insights.
 
 **Privacy-First Architecture:** The application **starts off entirely offline**, meaning all data processing and PDF-style preview generation happens locally in your browser. No sensitive financial data leaves your machine by default. Users can optionally enable advanced AI features by supplying their own API keys.
 
@@ -72,13 +72,27 @@ graph TD
    npm run dev
    ```
 
+## 📊 Quick Start: Demo Dashboard Guide
+
+To see the **Cipres Analytics Dashboard** in action immediately, you can use the provided demo files located in the `public/` directory.
+
+1.  **Run the application** locally (`npm run dev`) and navigate to `http://localhost:3000`.
+2.  **Select the Template**: Ensure "Business Intelligence Dashboard" is selected in the template dropdown.
+3.  **Upload Mapping File**: Use the **"Upload Mapping"** button and select `public/demo_mapping.xlsx`. 
+    *   *This file maps operational symbols to departments like R&D, Operations, and Infrastructure.*
+4.  **Upload Operations Report**: Use the **"Upload Report"** button and select `public/demo_operations.csv`.
+    *   *This file contains dummy asset values and status for various projects.*
+5.  **Generate**: Click the **"Generate Insights"** button. 
+6.  **Review**: Hover over the **Operational Index** or any cell in the **Historical Operating Metrics** table to see the interactive AI review tooltips!
+7.  **Export**: Click **"Export Dashboard (HTML)"** to save your report.
+
 ## Usage
 
-1. Upload your **Excel mapping file** (`Data_Preparation.xlsx`).
-2. Upload your **monthly IBKR CSV position report**.
-3. (Optional) Provide context text/PDFs for AI summarization.
-4. Select your preferred template.
-5. View the automatically generated factsheet preview and print/save as PDF.
+1.  **Step 1**: Upload your **Excel mapping file** (e.g., `Data_Preparation.xlsx` or the provided `demo_mapping.xlsx`).
+2.  **Step 2**: Upload your **CSV position report** (e.g., `IBKR_Report.csv` or `demo_operations.csv`).
+3.  **Step 3**: (Optional) Provide context text/PDFs for AI summarization in the "Context" area.
+4.  **Step 4**: Select your preferred template (standard dashboard or simple summary).
+5.  **Step 5**: View the automatically generated dashboard preview and print/save as PDF.
 
 ## 🚀 Roadmap: Dynamic AI Orchestrator Integration
 
