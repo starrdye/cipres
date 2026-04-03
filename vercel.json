@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/anthropic/:path*",
+      "destination": "https://api.anthropic.com/:path*"
+    },
+    {
+      "source": "/api/doubao/:path*",
+      "destination": "https://ark.cn-beijing.volces.com/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
