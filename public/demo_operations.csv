@@ -1,0 +1,8 @@
+Section,Type,Symbol,Description,Value,FXRateToBase,Sector
+Open Position Summary,Header,Symbol,Description,Value,FXRateToBase,Sector
+Open Position Summary,Data,OP-001,Logistics Node Alpha,5000000,1,Industrial
+Open Position Summary,Data,OP-002,R&D Lab Gamma,3000000,1,Technology
+Open Position Summary,Data,OP-003,Compute Cluster X,2000000,1,Technology
+Open Position Summary,Data,OP-004,Sales Hub Delta,1500000,1,Services
+Open Position Summary,Data,CASH,Cash,500000,1,Cash
+Open Position Summary,Total,Total,,12000000,1,
